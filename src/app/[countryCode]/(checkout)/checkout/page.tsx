@@ -14,7 +14,7 @@ export const metadata: Metadata = {
 }
 
 const fetchCart = async () => {
-  const cartId = "cart_01HRKP3JHWK63YPTXAP9095GX2";
+  const cartId = cookies().get("_medusa_cart_id")?.value;
 
   if (!cartId) {
     return notFound()
